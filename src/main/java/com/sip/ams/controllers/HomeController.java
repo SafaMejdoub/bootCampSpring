@@ -8,6 +8,7 @@ public class HomeController {
 	@RequestMapping("/info")  // ce qu'on tape ds l'url
 	public String info()
 	{
+		System.out.println("methode info");
 		return "home/info"; //schema fichier html templates/home
 	}
 	@RequestMapping("/affichage")
