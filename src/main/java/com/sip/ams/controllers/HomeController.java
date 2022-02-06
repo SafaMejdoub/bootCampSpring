@@ -1,5 +1,7 @@
 package com.sip.ams.controllers;
 
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,8 +12,12 @@ public class HomeController {
 	public String info(Model model)
 	{
 		String formation="fullstack";
+		ArrayList<String> names= new ArrayList<>();
+		names.add("OCP");
+		names.add("OCA");
 		System.out.println("methode info");
 		model.addAttribute("workshop", formation);
+		model.addAttribute("names", names);
 		return "home/info"; //schema fichier html templates/home
 	}
 	@RequestMapping("/affichage")
